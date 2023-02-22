@@ -1,4 +1,4 @@
-const url = 'https://www.php.engenius.com.co/DatabaseIE.php';
+import { url } from "./comun.js"
 
 const idGroup = window.location.href.split('#')[1]
 
@@ -15,12 +15,14 @@ const informGrupos = await fetch(url, {
     }
 }).then(res => res.json())
   .then(body => body.data)
-  console.log(informGrupos)
-  let body= ''
-  for(let i=0;i<informGrupos.length;i++){
-        body += `<tr><td>${informGrupos[i].nombre}</td>
-                     <td>${informGrupos[i].institución}</td>
-                     <td>${informGrupos[i].municipio}</td>
-                     <td>${informGrupos[i].numGrupo}</td></tr>`
-  }
-  document.getElementById('informacionGrupos').innerHTML = body
+
+let body = ''
+
+for(let i=0;i<informGrupos.length;i++){
+    body += `<tr><td>${informGrupos[i].nombre}</td>
+                    <td>${informGrupos[i].institución}</td>
+                    <td>${informGrupos[i].municipio}</td>
+                    <td>${informGrupos[i].numGrupo}</td></tr>`
+}
+
+document.getElementById('informacionGrupos').innerHTML = body

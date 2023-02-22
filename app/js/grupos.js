@@ -1,4 +1,4 @@
-const url = 'https://www.php.engenius.com.co/DatabaseIE.php';
+import { url } from "./comun.js"
 
 const codigoSede = window.location.href.split('#')[1]
 
@@ -16,8 +16,10 @@ const grupos = await fetch(url, {
 }).then(res => res.json())
   .then(body => body.data)
 
-  let body= ''
-  for(let i=0;i<grupos.length;i++){
-        body += `<tr><td><a href = "informacionGrupos.html#${grupos[i].id}">${grupos[i].nombre}<a/></td></tr>`
-  }
-  document.getElementById('tablaGrupos').innerHTML = body
+let body = ''
+
+for(let i=0;i<grupos.length;i++){
+    body += `<tr><td><a href = "informacionGrupos.html#${grupos[i].id}">${grupos[i].nombre}<a/></td></tr>`
+}
+
+document.getElementById('tablaGrupos').innerHTML = body

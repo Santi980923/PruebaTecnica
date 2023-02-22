@@ -1,4 +1,4 @@
-const url = 'https://www.php.engenius.com.co/DatabaseIE.php';
+import { url } from "./comun.js"
 
 const codigoInstitucion = window.location.href.split('#')[1]
 
@@ -17,9 +17,9 @@ const sedes = await fetch(url, {
   .then(body => body.data)
 
 
-  //Muestra la lista de municipios en una tabla
-  let body= ''
-  for(let i=0;i<sedes.length;i++){
-        body += `<tr><td><a href = "grupos.html#${sedes[i].dane}">${sedes[i].nombre}<a/></td></tr>`
-  }
-  document.getElementById('tablaSedes').innerHTML = body
+  //Muestra la lista de sedes en una tabla
+let body = ''
+for(let i=0;i<sedes.length;i++){
+    body += `<tr><td><a href = "grupos.html#${sedes[i].dane}">${sedes[i].nombre}<a/></td></tr>`
+}
+document.getElementById('tablaSedes').innerHTML = body

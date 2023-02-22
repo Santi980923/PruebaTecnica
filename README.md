@@ -1,3 +1,4 @@
 # Prueba Tecnica Santiago Espitia Torres
-Buenos dias por favor seguir el video de guia adjunto ubicado en la carpeta docs.
-Muchas gracias, estare atento a sus comentarios.
+Este proyecto describe la solucion de la prueba tecnica de Engenius Software Services. Este proyecto utiliza para su desarrollo HTML5,CSS y JavaScript ademas se utiliza el uso de API para realizar las consultas (mediante API Fetch) y poder mostrar la informacion de manera sencilla. 
+
+Para correr la aplicacion se debe utilizar Visual Studio Code con la extension de live server instalada. Se dirige a la carpeta APP,donde encontrara los archivos y carpetas de la aplicacion, debera dar click derecho en el archivo index.html y darle click en la opcion "Open with live server", este abrira la pagina principal en el navegador donde podra navegar en los distintos municipios,instituciones,sedes y grupos del departamento del tolima.
